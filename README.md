@@ -7,4 +7,4 @@ Documentação do projeto de conclusão de curso ! Aqui voce encontra todos os a
 
 É um sistema de controle de malha fechada utilizado como experimento na area de controle digital e analógico, ele consiste em controlar o angulo de uma haste para manter a posição de uma bola em uma posição estatica previamente estabelecida.
 
-<img src="/static/imagem.png" alt="Exemplo imagem">
+<img src="/static/Esquematico.jpg" alt="Exemplo imagem">
