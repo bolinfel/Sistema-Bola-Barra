@@ -1,6 +1,4 @@
 # Sistema-Bola-Barra 📜
-**Readme Template**
-
 Documentação do projeto de conclusão de curso ! Aqui voce encontra todos os arquivos utilizados para contruir um modelo de **Sistema bola barra**, e as instruções de como foi realizado
 
 ## O que é o sistema bola barra? ⁉️
