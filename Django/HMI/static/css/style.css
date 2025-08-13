@@ -1,0 +1,79 @@
+body {
+    --bs-body-font-family: "Montserrat", sans-serif;
+}
+
+/* Aumenta o tamanho da fonte do título */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar {
+    background-color:#3b25aeff;
+}
+
+/* Espaço maior à direita do primeiro ícone */
+.navbar-icons > a:first-child {
+    margin-right: 5.3rem; /* 32px, ajuste como quiser */
+}
+/* Tamanho dos ícones */
+.navbar-icons i {
+    font-size: 2rem;
+}
+
+/* Barra secundária abaixo da navbar */
+.subnavbar {
+    background-color: #4d39b5ff; /* escuro, igual navbar dark */
+    color: white;
+    padding: 0.5rem 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.subnavbar .icon-labels {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.subnavbar .icon-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    cursor: default;
+    user-select: none;
+}
+
+.subnavbar .icon-label i {
+    font-size: 1.1rem;
+}
+
+.subnavbar .page-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.full-center {
+  height: 100vh;               /* altura total da janela */
+  display: flex;
+  justify-content: center;     /* centraliza horizontalmente */
+  align-items: center;         /* centraliza verticalmente */
+  text-align: center;          /* centraliza texto multiline */
+  padding: 1rem;               /* só para um pouco de espaço nas bordas */
+}
+
+.svg-background {
+  position: fixed;
+  top: 1;
+  left: 2;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* deixa os cliques "passarem" para os elementos da frente */
+  z-index: -1;          /* coloca atrás de todo o conteúdo */
+}
