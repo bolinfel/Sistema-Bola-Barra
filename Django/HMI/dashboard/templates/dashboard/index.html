@@ -2,5 +2,38 @@
 {% block page_title %}Dashboard{% endblock %}
 {% block content %}
 
+<h1>Dados do Datalog</h1>
+<table>
+<thead>
+<tr>
+<th>Timestamp</th>
+<th>Servo Motor Raw</th>
+<th>Servo Motor Angle</th>
+<th>Sensor Raw</th>
+<th>Sensor Distance</th>
+<th>Serial Connection Status</th>
+<th>Arduino Status</th>
+<th>Raspberry Status</th>
+</tr>
+</thead>
+<tbody>
+{% for entry in datalog_list %}
+<tr>
+<td>{{ entry.TIMESTAMP|date:"Y-m-d H:i:s" }}</td>
+<td>{{ entry.SERVO_MOTOR_RAW }}</td>
+<td>{{ entry.SERVO_MOTOR_SCA }}</td>
+<td>{{ entry.SERVO_RAW }}</td>
+<td>{{ entry.SERVO_SCA }}</td>
+<td>{{ entry.ARDUINO_RPI_STATUS }}</td>
+<td>{{ entry.ARDUINO_STATUS }}</td>
+<td>{{ entry.RPI_STATUS }}</td>
+</tr>
+{% empty %}
+<tr>
+<td colspan="8">Nenhum dado encontrado.</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
 
 {% endblock %}

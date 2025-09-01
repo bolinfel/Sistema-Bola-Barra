@@ -9,3 +9,7 @@ class Datalog(models.Model):
     ARDUINO_RPI_STATUS = models.BooleanField(verbose_name="Serial Connection Status")
     ARDUINO_STATUS = models.BooleanField(verbose_name="Status Arduino")
     RPI_STATUS = models.BooleanField(verbose_name="Status Raspberry")
+    
+    def __str__(self):
+        # Corrija esta linha para retornar o TIMESTAMP, que é um campo real.
+        return str(self.TIMESTAMP)
