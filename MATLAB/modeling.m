@@ -2,12 +2,13 @@
 %       Symbolic Math Toolbox
 
 %define constants
-massaBola = 0.103;
-raioBola = 0.01465;
+fs = 50;
+massaBola = 0.006;
+raioBola = 0.0046;
 gravidade = 9.8051;
-haste = 0.034;
-barra = 0.15425;
-momentoInercia = 8.842 * power(10,-6);
+haste = 0.0050;
+barra = 0.0248;
+momentoInercia = 2/5 * massaBola * raioBola^2;
 
 %calculate constant
 raioBola_sq = raioBola * raioBola;
@@ -23,3 +24,16 @@ H = tf(num, den) * K;
 % Display the transfer function
 disp('Função de Transferencia:');
 H
+
+num = K * [1];
+den = [1 0 0];
+
+% Discretização pelo método bilinear (Tustin)
+[numd, dend] = bilinear(num, den, fs);
+
+% Criar a função de transferência discreta
+Hd = tf(numd, dend, 1/fs);
+
+% Mostrar o resultado
+disp('Função de Transferência Discretizada (Tustin):');
+Hd
