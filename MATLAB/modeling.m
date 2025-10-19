@@ -10,6 +10,11 @@ haste = 0.0050;
 barra = 0.0248;
 momentoInercia = 2/5 * massaBola * raioBola^2;
 
+%define PID constants
+Kp = 5.27508301369566;
+Ki = 1.10967723382933;
+Kd = 3.99642371709311;
+
 %calculate constant
 raioBola_sq = raioBola * raioBola;
 Knum = (massaBola * gravidade * haste * raioBola_sq);
